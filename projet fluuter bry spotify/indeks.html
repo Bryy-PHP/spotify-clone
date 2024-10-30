@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone - Bryan Music</title>
+    <!-- Memuat Materialize CSS dari CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Memuat Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Memuat Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="row">
+        <div class="col s3 sidebar">
+            <h4>Bryan Music</h4>
+            <a href="#!">Home</a>
+            <a href="#!">Cari</a>
+            <a href="#!">Koleksi Kamu</a>
+            <h5>Playlist Kamu</h5>
+            <a href="#!">Populer</a>
+            <a href="#!">Rock Classics</a>
+            <a href="#!">Lagu Favorit</a>
+        </div>
+
+        <!-- Content -->
+        <div class="col s9 content">
+            <div class="playlist">
+                <h4>Top Hits Indonesia</h4>
+                <p>Koleksi lagu-lagu hits terbaru di Indonesia</p>
+                <div class="row">
+                    <div class="col s3">
+                        <img src="https://via.placeholder.com/150" alt="Top Hits Playlist">
+                    </div>
+                    <div class="col s9">
+                        <!-- List of songs -->
+                        <div class="playlist-item">
+                            <span>Lagu 1 - Artis 1</span>
+                            <span>3:45</span>
+                        </div>
+                        <div class="playlist-item">
+                            <span>Lagu 2 - Artis 2</span>
+                            <span>4:12</span>
+                        </div>
+                        <div class="playlist-item">
+                            <span>Lagu 3 - Artis 3</span>
+                            <span>3:55</span>
+                        </div>
+                        <div class="playlist-item">
+                            <span>Lagu 4 - Artis 4</span>
+                            <span>2:45</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Player Bar -->
+    <div class="player-bar">
+        <div class="now-playing">
+            <span id="nowPlayingText">Lagu Sedang Diputar: Lagu 1 - Artis 1</span>
+        </div>
+        <div class="controls">
+            <i class="material-icons" onclick="prevTrack()">skip_previous</i>
+            <i class="material-icons" onclick="togglePlayPause()">play_circle_filled</i>
+            <i class="material-icons" onclick="nextTrack()">skip_next</i>
+        </div>
+        <div class="volume-control">
+            <i class="material-icons" onclick="muteUnmute()">volume_up</i>
+        </div>
+        <!-- Audio Player (disembunyikan) -->
+        <audio id="audioPlayer" src="music/lagu1.mp3"></audio>
+    </div>
+
+    <!-- Memuat Materialize JS dari CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Memuat JavaScript Custom -->
+    <script src="script.js"></script>
+</body>
+</html>
